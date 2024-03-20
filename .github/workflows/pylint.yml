@@ -31,7 +31,7 @@ jobs:
         run: pip install -r requirements.txt
           
       - name: Go
-        run: uvicorn main:app --reload
+        run: uvicorn src.main:app --reload
           
       - name: Test
         run: pytest src/tests/conftest.py
