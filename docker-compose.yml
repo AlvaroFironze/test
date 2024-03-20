@@ -1,0 +1,13 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        image: backend
+        volumes:
+            - ./src:/src
+        working_dir: /src/
+        command: uvicorn main:app --reload
+        ports:
+            - "8000:8000"
+
